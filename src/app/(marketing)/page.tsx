@@ -77,11 +77,11 @@ export default function LandingPage() {
           <div className="space-y-12 fade-in">
             <div>
               <h1 className="text-4xl mb-6 text-white">
-                Move the way you're meant to
+                Move the way you&apos;re meant to
               </h1>
               <p className="text-lg text-gray-300">
               Stride puts movement first with audio-guided cardio workouts led by 
-              expert athletes and coaches. Whether you're running, rucking, hiking, 
+              expert athletes and coaches. Whether you&apos;re running, rucking, hiking, 
               rowing, or paddling, our workouts adapt to your skill level—helping you 
               stay motivated and track your progress. At the heart of Stride, we aim to 
               reshape movement into a way of life, inspiring a deeper connection to the 
