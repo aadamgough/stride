@@ -19,7 +19,7 @@ const questions = [
   },
   {
     id: 2,
-    text: "How many forms of traditional cardio workouts do you do?",
+    text: "How many forms of cardio workouts do you regularly do?",
     options: ["One", "Two", "Three", "More than three"]
   },
   {
@@ -34,25 +34,42 @@ const questions = [
   },
   {
     id: 5,
-    text: "If you have a roadblock to being disciplined with your workouts, what is it?",
-    options: ["Lack of knowledge", "Lack of time", "Lack of motivation", "Lack of equipment", "N/A"]
+    text: "If there were new forms of cardio workouts you could be guided through, how likely would you be to try them?",
+    options: ["Not at all", "Somewhat", "Very", "Extremely"]
   },
   {
     id: 6,
     text: "How would you describe yourself when it comes to fitness?",
-    options: ["Casual Mover: I enjoy staying active but do not follow a structured routine.", "Consistent Enthusiast : I work out regularly and prioritize fitness in my lifestyle.", "Goal-Driven Athlete : I train with specific goals in mind, such as performance or competition.", "Rebuilding or Starting Fresh : I am getting back into fitness or just beginning my journey."]
+    options: ["Casual Mover: I enjoy staying active but do not follow a structured routine.", "Consistent Enthusiast: I work out regularly and prioritize fitness in my lifestyle.", "Goal-Driven Athlete: I train with specific goals in mind, such as performance or competition.", "Rebuilding or Starting Fresh: I am getting back into fitness or just beginning my journey."]
   },
   {
     id: 7,
-    text: "Are you active on fitness social media apps (e.g. Strava, Nike Run Club, etc.)?",
-    options: ["Yes", "No", "No, but I would be open to it", "No, and I don't plan to start"]
+    text: "Are you active on fitness social media or tracking apps (e.g., Strava, Nike Run Club, Garmin, Peloton, etc.)?",
+    options: ["Yes, frequently", "Yes, occasionally", "No, but I would be open to it", "No, and I don't plan to start"]
   },
   {
     id: 8,
-    text: "How much would you be willing to pay for access to a personal trainer who guides you through a workout, where you'd also be able to track your stats, progress, and discover new workouts?",
-    options: ["$0/month", "$10/month", "$20/month", "$30/month"]
+    text: "What do you typically listen to during your workouts?",
+    options: ["Music", "Podcasts", "Audiobooks", "Nothing", "Other"]
   },
-]
+  {
+    id: 9,
+    text: "Would you find it valuable to have an audio coach guide you through workouts tailored to your fitness level and goals?",
+    options: ["Yes, definitely", "Maybe, depends on the experience", "Not really", "No, I prefer working out on my own"]
+  },
+  {
+    id: 10,
+    text: "How much would you be willing to pay for access to guided audio workouts with progress tracking and new workout discovery?",
+    options: ["$0/month", "$10/month", "$20/month", "$30/month", ">$30/month"]
+  },
+  {
+    id: 11,
+    text: "If you could improve one aspect of your cardio workouts, what would it be?",
+    type: "text-input",
+    placeholder: "E.g., motivation, variety, tracking progress..."
+  }
+];
+
 
 
 export default function QuestionnairePage() {
