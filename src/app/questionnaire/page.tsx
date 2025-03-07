@@ -112,7 +112,7 @@ export default function QuestionnairePage() {
         </button>
         
         <div className="max-w-2xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8">Fitness Questionnaire</h1>
+          <h1 className="text-3xl font-bold mb-8">Product Questionnaire</h1>
           
           <div className="space-y-6">
             <h2 className="text-xl mb-4">{questions[currentQuestion].text}</h2>
