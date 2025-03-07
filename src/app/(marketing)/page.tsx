@@ -49,37 +49,37 @@ export default function LandingPage() {
 
       {/* Content */}
       <div className="container mx-auto px-4">
-        {/* Former Navbar elements */}
+        {/* Navbar - now mobile responsive */}
         <div className="flex justify-between items-center h-16 pt-4">
             <div className="flex items-center space-x-2">
-                <div className="relative w-8 h-8">
-                <Image
-                    src="https://res.cloudinary.com/dmsgmyybq/image/upload/v1741297817/image_mbquew.png"
-                    alt="Stride logo"
-                    fill
-                    className="object-contain"
-                    priority
-                />
+                <div className="relative w-6 h-6 sm:w-8 sm:h-8">
+                    <Image
+                        src="https://res.cloudinary.com/dmsgmyybq/image/upload/v1741297817/image_mbquew.png"
+                        alt="Stride logo"
+                        fill
+                        className="object-contain"
+                        priority
+                    />
+                </div>
+                <span className="text-lg sm:text-xl text-white" style={{ fontFamily: 'var(--font-lexend-zetta)' }}>Stride</span>
             </div>
-        <span className="text-xl text-white" style={{ fontFamily: 'var(--font-lexend-zetta)' }}>Stride</span>
-          </div>
           
-          <button 
-            onClick={() => router.push('/questionnaire')}
-            className="px-4 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition"
-          >
-            Product Questionnaire
-          </button>
+            <button 
+                onClick={() => router.push('/questionnaire')}
+                className="text-sm sm:text-base px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition"
+            >
+                Product Questionnaire
+            </button>
         </div>
 
-        <div className="grid grid-cols-2 gap-12 items-center pt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center pt-8 sm:pt-16">
           {/* Left Column */}
-          <div className="space-y-12 fade-in">
+          <div className="space-y-8 md:space-y-12 fade-in">
             <div>
-              <h1 className="text-4xl mb-6 text-white">
-                Move the way you&apos;re meant to
+            <h1 className="text-3xl sm:text-4xl mb-4 sm:mb-6 text-white">
+              Move the way you&apos;re meant to
               </h1>
-              <p className="text-lg text-gray-300">
+              <p className="text-base sm:text-lg text-gray-300">
               Stride puts movement first with audio-guided cardio workouts led by 
               expert athletes and coaches. Whether you&apos;re running, rucking, hiking, 
               rowing, or paddling, our workouts adapt to your skill level—helping you 
@@ -89,32 +89,32 @@ export default function LandingPage() {
               </p>
             </div>
             
-            <div className="relative w-full aspect-[9/16] max-w-sm mx-auto">
-            <motion.div
+            <div className="relative w-full max-w-[280px] sm:max-w-sm aspect-[9/16] mx-auto">
+              <motion.div
                 className="absolute inset-0"
                 whileHover={{
                     scale: 1.025,
                     filter: 'drop-shadow(0 0 30px rgba(255,255,255,0.3))',
                     transition: { duration: 0.3 }
                 }}
-            >
-              <Image
-                src="https://res.cloudinary.com/dmsgmyybq/image/upload/v1741287961/iMockup_-_iPhone_15_Pro_Max_rphey1.png"
-                alt="App mockup"
-                fill
-                className="object-contain transition-all duration-300"
-                style={{ 
-                  filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.2))'
-                }}
-              />
+              >
+                <Image
+                  src="https://res.cloudinary.com/dmsgmyybq/image/upload/v1741287961/iMockup_-_iPhone_15_Pro_Max_rphey1.png"
+                  alt="App mockup"
+                  fill
+                  className="object-contain transition-all duration-300"
+                  style={{ 
+                    filter: 'drop-shadow(0 0 20px rgba(255,255,255,0.2))'
+                  }}
+                />
               </motion.div>
             </div>
           </div>
 
           {/* Right Column */}
-          <div className="space-y-12 fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="space-y-8 md:space-y-12 fade-in" style={{ animationDelay: '0.2s' }}>
             <div>
-              <h2 className="text-4xl mb-3 text-white">
+              <h2 className="text-3xl sm:text-4xl mb-2 sm:mb-3 text-white">
                 Discover new ways to workout
               </h2>
               <p className="text-gray-300">
@@ -128,9 +128,9 @@ export default function LandingPage() {
             </div>
 
             <div>
-              <h2 className="text-4xl mb-3 text-white">
+            <h2 className="text-3xl sm:text-4xl mb-2 sm:mb-3 text-white">
               Get early access
-              </h2>
+            </h2>
               <p className="text-gray-300">
               Join the waitlist today to be among the first to try Stride. Once you sign up, you’ll 
               unlock access to download the demo.
@@ -139,8 +139,8 @@ export default function LandingPage() {
 
             {/* Waitlist Form */}
             <div>
-              <div className="space-y-4">
-                <div className="flex space-x-2">
+              <div className="space-y-3 sm:space-y-4">
+                <div className="flex flex-col sm:flex-row gap-2 sm:space-x-2">
                   <Input 
                     type="email" 
                     placeholder="you@email.com" 
@@ -153,11 +153,11 @@ export default function LandingPage() {
                     onClick={handleWaitlistSubmit}
                     disabled={!email || isSubmitting || isJoined}
                     className={`${
-                    isJoined 
+                      isJoined 
                         ? 'bg-green-500 hover:bg-green-600' 
                         : 'bg-white hover:bg-gray-200'
-                    } text-black transition-colors`}
-                    >
+                    } text-black transition-colors w-full sm:w-auto`}
+                  >
                     {isJoined ? 'Joined!' : 'Join Waitlist'}
                   </Button>
                 </div>

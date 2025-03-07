@@ -103,21 +103,21 @@ export default function QuestionnairePage() {
 
   return (
     <main className="min-h-screen bg-black text-white">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-4 sm:py-8">
         <button 
           onClick={() => router.push('/')} 
-          className="mb-8 text-white/60 hover:text-white"
+          className="mb-4 sm:mb-8 text-sm sm:text-base text-white/60 hover:text-white"
         >
           ← Back
         </button>
         
         <div className="max-w-2xl mx-auto">
-          <h1 className="text-3xl font-bold mb-8">Product Questionnaire</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8">Product Questionnaire</h1>
           
-          <div className="space-y-6">
-            <h2 className="text-xl mb-4">{questions[currentQuestion].text}</h2>
+          <div className="space-y-4 sm:space-y-6">
+            <h2 className="text-lg sm:text-xl mb-3 sm:mb-4">{questions[currentQuestion].text}</h2>
             
-            <div className="space-y-3">
+            <div className="space-y-2 sm:space-y-3">
               {questions[currentQuestion].type === "text-input" ? (
                 <input
                   type="text"
@@ -125,7 +125,7 @@ export default function QuestionnairePage() {
                   value={answers[questions[currentQuestion].id] || ''}
                   onChange={(e) => handleAnswer(e.target.value)}
                   disabled={isSubmitting}
-                  className="w-full p-4 rounded-lg bg-white/10 text-white 
+                  className="w-full p-3 sm:p-4 text-base sm:text-lg rounded-lg bg-white/10 text-white 
                     placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/50 
                     transition disabled:opacity-50 disabled:cursor-not-allowed"
                 />
@@ -135,7 +135,7 @@ export default function QuestionnairePage() {
                     key={option}
                     onClick={() => handleAnswer(option)}
                     disabled={isSubmitting}
-                    className={`w-full p-4 text-left rounded-lg transition
+                    className={`w-full p-3 sm:p-4 text-sm sm:text-base text-left rounded-lg transition
                       ${answers[questions[currentQuestion].id] === option 
                         ? 'bg-white/30' 
                         : 'bg-white/10 hover:bg-white/20'}
@@ -147,17 +147,17 @@ export default function QuestionnairePage() {
               )}
             </div>
 
-            <div className="mt-8 flex justify-between items-center">
-              <div className="flex items-center gap-4">
+            <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0">
+              <div className="flex items-center gap-3 sm:gap-4 w-full sm:w-auto">
                 {currentQuestion > 0 && (
                   <button
                     onClick={handlePreviousQuestion}
-                    className="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition"
+                    className="px-3 sm:px-4 py-2 text-sm sm:text-base rounded-lg bg-white/10 hover:bg-white/20 transition"
                   >
                     Previous
                   </button>
                 )}
-                <div className="text-sm text-gray-400">
+                <div className="text-xs sm:text-sm text-gray-400">
                   Question {currentQuestion + 1} of {questions.length}
                 </div>
               </div>
@@ -165,14 +165,15 @@ export default function QuestionnairePage() {
               <button
                 onClick={handleNext}
                 disabled={!answers[questions[currentQuestion].id] || isSubmitting}
-                className="px-6 py-2 rounded-lg bg-white/10 hover:bg-white/20 
-                  transition disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full sm:w-auto px-4 sm:px-6 py-2 text-sm sm:text-base rounded-lg 
+                  bg-white/10 hover:bg-white/20 transition disabled:opacity-50 
+                  disabled:cursor-not-allowed"
               >
                 {currentQuestion === questions.length - 1 ? 'Submit' : 'Next'}
               </button>
             </div>
 
-            <div className="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+            <div className="w-full h-1.5 sm:h-2 bg-white/10 rounded-full overflow-hidden">
               <div 
                 className="h-full bg-white/30 transition-all duration-300"
                 style={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
