@@ -24,7 +24,7 @@ const questions = [
   },
   {
     id: 3,
-    text: "What's your preferred workout environment?",
+    text: "What is your preferred workout environment?",
     options: ["Home", "Gym", "Outdoors", "Group Classes"]
   },
   {
