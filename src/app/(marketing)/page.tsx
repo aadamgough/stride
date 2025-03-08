@@ -123,7 +123,7 @@ export default function LandingPage() {
                 </h1>
               </div>
               <p className="text-gray-300">
-                Explore the coaching styles of our expert athletes in your ear as they motivate and guide you through your workouts.
+                Explore the coaching styles of our expert athletes in your ear as they motivate and guide you through workouts that range in duration and intensity.
               </p>
               <br/>
 
@@ -147,7 +147,7 @@ export default function LandingPage() {
                 </h1>
               </div>
               <p className="text-gray-300">
-                Awaken your body to new experiences through Stride's diverse set of workouts to help you seek adventure, push your boundaries, and build consistency.
+                Awaken your body to new experiences through Stride&apos;s diverse set of workouts to help you seek adventure, push your boundaries, and build consistency.
               </p>
               <br/>
             </div>
@@ -157,7 +157,7 @@ export default function LandingPage() {
               Get early access
             </h2>
               <p className="text-gray-300">
-              Join the waitlist today to be among the first to try Stride. Once you sign up, you’ll 
+              Join the waitlist today to be among the first to try Stride. Once you sign up, you&apos;ll 
               unlock access to download the demo.
               </p>
             </div>
