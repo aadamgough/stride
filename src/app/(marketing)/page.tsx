@@ -45,8 +45,6 @@ export default function LandingPage() {
   return (
     <main className="min-h-screen relative overflow-hidden">
       <WaveBackground />
-
-
       {/* Content */}
       <div className="container mx-auto px-4">
         {/* Navbar - now mobile responsive */}
@@ -76,7 +74,7 @@ export default function LandingPage() {
           {/* Left Column */}
           <div className="space-y-8 md:space-y-12 fade-in">
             <div>
-            <h1 className="text-3xl sm:text-4xl mb-4 sm:mb-6 text-white">
+            <h1 className="text-3xl font-bold sm:text-4xl mb-4 sm:mb-6 text-white">
               Move the way you&apos;re meant to
               </h1>
               <p className="text-base sm:text-lg text-gray-300">
@@ -111,24 +109,51 @@ export default function LandingPage() {
             </div>
           </div>
 
-          {/* Right Column */}
-          <div className="space-y-8 md:space-y-12 fade-in" style={{ animationDelay: '0.2s' }}>
+          <div className="space-y-8 md:space-y-12 fade-in pt-8 md:pt-16" style={{ animationDelay: '0.2s' }}>
+          <div className="my-34 md:my-38"></div>
             <div>
-              <h2 className="text-3xl sm:text-4xl mb-2 sm:mb-3 text-white">
-                Discover new ways to workout
+              <h2 className="text-3xl sm:text-3xl mb-2 sm:mb-3 text-white">
+                What do you get with Stride?
               </h2>
+              <br></br>
+              <div className="flex items-center gap-2 mb-2">
+                <Image src="https://res.cloudinary.com/dmsgmyybq/image/upload/v1741392971/Vector_2_n66pid.png" alt="Guided workouts" width={24} height={24} className="text-white" />
+                <h1 className="text-1xl sm:text-1xl text-white">
+                  Guided workouts
+                </h1>
+              </div>
               <p className="text-gray-300">
-              Seek adventure. Push your boundaries. Build consistency. 
+                Explore the coaching styles of our expert athletes in your ear as they motivate and guide you through your workouts.
               </p>
               <br/>
+
+              {/* Progress tracking section */}
+              <div className="flex items-center gap-2 mb-2">
+                <Image src="https://res.cloudinary.com/dmsgmyybq/image/upload/v1741392971/Group_sogd0p.png" alt="Progress tracking" width={24} height={24} className="w-6 h-6 text-white" />
+                <h1 className="text-1xl sm:text-1xl text-white">
+                  Progress tracking
+                </h1>
+              </div>
               <p className="text-gray-300">
-              Awaken your body to new experiences through diversifying your workouts, one  
-             step, stroke, and stride at at time.
+                Monitor your progress with AI-powered tracking tools that analyze your performance, adapt to your goals, and provide personalized insights to keep you moving forward.
               </p>
+              <br/>
+
+              {/* Diverse workout section */}
+              <div className="flex items-center gap-2 mb-2">
+                <Image src="https://res.cloudinary.com/dmsgmyybq/image/upload/v1741392971/Vector_3_h622ll.png" alt="Diverse workout selection" width={24} height={24} className="w-6 h-6 text-white" />
+                <h1 className="text-1xl sm:text-1xl text-white">
+                  Diverse workout selection
+                </h1>
+              </div>
+              <p className="text-gray-300">
+                Awaken your body to new experiences through Stride's diverse set of workouts to help you seek adventure, push your boundaries, and build consistency.
+              </p>
+              <br/>
             </div>
 
             <div>
-            <h2 className="text-3xl sm:text-4xl mb-2 sm:mb-3 text-white">
+            <h2 className="text-3xl sm:text-3xl mb-2 sm:mb-3 text-white">
               Get early access
             </h2>
               <p className="text-gray-300">
@@ -181,6 +206,7 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
+      <div className="my-20 md:my-28"></div>
     </main>
   )
 }
